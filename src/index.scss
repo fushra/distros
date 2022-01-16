@@ -1,0 +1,124 @@
+// This is the only scss file that is in this entire project for a simple reason,
+// I need mixins and I really don't want to have to do this stuff manually
+// For more info, see this stack overflow issue:
+// https://stackoverflow.com/a/58662471
+
+@mixin defineColorRGB($color-name, $value) {
+  $red: red($value);
+  $green: green($value);
+  $blue: blue($value);
+  #{$color-name}: unquote('rgb(#{$red}, #{$green}, #{$blue})');
+  #{$color-name}-rgb: $red, $green, $blue;
+  #{$color-name}-r: $red;
+  #{$color-name}-g: $green;
+  #{$color-name}-b: $blue;
+}
+
+// replace substring with another string
+// credits: https://css-tricks.com/snippets/sass/str-replace-function/
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+  @return $string;
+}
+
+@function alpha($color, $opacity) {
+  $color: str-replace($color, 'var(');
+  $color: str-replace($color, ')');
+  $color-r: var(#{$color + '-r'});
+  $color-g: var(#{$color + '-g'});
+  $color-b: var(#{$color + '-b'});
+  @return rgba($color-r, $color-g, $color-b, $opacity);
+}
+
+/* Colors generated via material theme builder */
+:root {
+  @include defineColorRGB(--color-primary, #006d40);
+  @include defineColorRGB(--color-on-primary, #ffffff);
+  @include defineColorRGB(--color-primary-container, #73fcb2);
+  @include defineColorRGB(--color-on-primary-container, #002110);
+
+  @include defineColorRGB(--color-secondary, #175db2);
+  @include defineColorRGB(--color-on-secondary, #ffffff);
+  @include defineColorRGB(--color-secondary-container, #d6e3ff);
+  @include defineColorRGB(--color-on-secondary-container, #001b3f);
+
+  @include defineColorRGB(--color-tertiary, #3b6471);
+  @include defineColorRGB(--color-on-tertiary, #ffffff);
+  @include defineColorRGB(--color-tertiary-container, #bee9f8);
+  @include defineColorRGB(--color-on-tertiary-container, #001f27);
+
+  @include defineColorRGB(--color-error, #ba1b1b);
+  @include defineColorRGB(--color-on-error, #ffffff);
+  @include defineColorRGB(--color-error-container, #ffdad4);
+  @include defineColorRGB(--color-on-error-container, #ffffff);
+
+  @include defineColorRGB(--color-background, #fbfdf8);
+  @include defineColorRGB(--color-on-background, #191c1a);
+
+  @include defineColorRGB(--color-surface, #fbfdf8);
+  @include defineColorRGB(--color-on-surface, #191c1a);
+  @include defineColorRGB(--color-surface-variant, #dce5dc);
+  @include defineColorRGB(--color-on-surface-variant, #404942);
+
+  @include defineColorRGB(--color-outline, #717972);
+  @include defineColorRGB(--color-inverse-surface, #2e312e);
+  @include defineColorRGB(--color-inverse-on-surface, #eff1ec);
+}
+
+/* Dark colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include defineColorRGB(--color-primary, #53df98);
+    @include defineColorRGB(--color-on-primary, #00391f);
+    @include defineColorRGB(--color-primary-container, #00522f);
+    @include defineColorRGB(--color-on-primary-container, #73fcb2);
+
+    @include defineColorRGB(--color-secondary, #a8c7ff);
+    @include defineColorRGB(--color-on-secondary, #002f66);
+    @include defineColorRGB(--color-secondary-container, #004590);
+    @include defineColorRGB(--color-on-secondary-container, #d6e3ff);
+
+    @include defineColorRGB(--color-tertiary, #a3cddc);
+    @include defineColorRGB(--color-on-tertiary, #033541);
+    @include defineColorRGB(--color-tertiary-container, #224c58);
+    @include defineColorRGB(--color-on-tertiary-container, #bee9f8);
+
+    @include defineColorRGB(--color-error, #ffb4a9);
+    @include defineColorRGB(--color-on-error, #680003);
+    @include defineColorRGB(--color-error-container, #930006);
+    @include defineColorRGB(--color-on-error-container, #ffdad4);
+
+    @include defineColorRGB(--color-background, #191c1a);
+    @include defineColorRGB(--color-on-background, #e2e3df);
+
+    @include defineColorRGB(--color-surface, #191c1a);
+    @include defineColorRGB(--color-on-surface, #e2e3df);
+    @include defineColorRGB(--color-surface-variant, #404942);
+    @include defineColorRGB(--color-on-surface-variant, #c0c9c0);
+
+    @include defineColorRGB(--color-outline, #8a938b);
+
+    @include defineColorRGB(--color-inverse-surface, #191c1a);
+    @include defineColorRGB(--color-inverse-on-surface, #e2e3df);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
