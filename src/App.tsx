@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Center } from './components'
+import { Done, TechExperience, ViewFc, Welcome } from './views'
+import { Customization } from './views/customisability'
+import { LookAndFeel } from './views/LookAndFeel'
+import { Usage } from './views/usage'
+
+const views: ViewFc[] = [
+  Welcome,
+  TechExperience,
+  Usage,
+  LookAndFeel,
+  Customization,
+  Done,
+]
 
 function App() {
+  const [currentView, setCurrentView] = React.useState(0)
+  const [data, setData] = React.useState({})
+  const [goingBack, setGoingBack] = React.useState(false)
+
+  const ViewToRender = views[currentView]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ height: '100vh' }}>
+      <Center>
+        <ViewToRender
+          prevData={data}
+          fromPrev={goingBack}
+          onNext={(newData) => {
+            setData(newData)
+            setGoingBack(false)
+            setCurrentView(currentView + 1)
+          }}
+          onPrev={() => {
+            setGoingBack(true)
+            setCurrentView(currentView - 1)
+          }}
+        />
+      </Center>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
