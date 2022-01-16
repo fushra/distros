@@ -1,0 +1,30 @@
+.card {
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 250px;
+}
+
+.card h2 {
+  margin: 0 8px;
+}
+
+.buttons button {
+  float: right;
+}
+
+/* Types */
+.filled {
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface-variant);
+}
+
+/* States */
+.card:hover,
+.focused {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgba(var(--color-on-surface-variant-rgb), 0.4);
+}
+
+.none {
+  /* Here to stop undefined happening */
+}
