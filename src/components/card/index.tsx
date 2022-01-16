@@ -16,6 +16,8 @@ export const Card = ({
   text,
   buttons,
   onClick,
+  img,
+  imgAlt,
 }: {
   buttons?: ReactNode
   title?: string
@@ -23,6 +25,8 @@ export const Card = ({
   text?: string
   type: CardType
   state?: CardState
+  img?: string
+  imgAlt?: string
   onClick?: () => void
 }) => (
   <Ripples>
@@ -32,6 +36,8 @@ export const Card = ({
         if (onClick) onClick()
       }}
     >
+      {img && <img src={img} alt={imgAlt} />}
+
       {title && <h2>{title}</h2>}
       {subtitle && <h3>{subtitle}</h3>}
       {text && <p>{text}</p>}

@@ -4,6 +4,13 @@
   max-width: 250px;
 }
 
+.card img {
+  margin: -16px;
+  margin-bottom: 0;
+  border-radius: 12px;
+  width: calc(100% + 32px);
+}
+
 .card h2 {
   margin: 0 8px;
 }
