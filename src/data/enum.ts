@@ -8,7 +8,7 @@ export enum Toolkit {
 }
 
 export enum DesktopEnvironment {
-  KDE,
-  XFCE,
-  GNOME,
+  KDE = 'KDE',
+  XFCE = 'XFCE',
+  GNOME = 'GNOME',
 }

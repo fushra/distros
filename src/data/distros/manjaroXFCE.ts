@@ -13,7 +13,7 @@ const manjaroXFCE: Distro = {
    * Manjaro's package manager (pamac) is slightly less easy to use than some
    * other distros (e.g. pop shop), so it gets a usability downgrade
    */
-  recommendedExperience: TechExperienceAmount.intermediate,
+  experienceLevel: TechExperienceAmount.intermediate,
 
   screenShots: [],
   videos: ['https://youtu.be/I6WgT7JkkQk'],

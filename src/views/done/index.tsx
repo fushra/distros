@@ -1,16 +1,42 @@
+import { useState } from 'react'
 import { ViewFc } from '..'
-import { Button } from '../../components'
-import { distros } from '../../data'
-import { sortDistros } from './algorithm'
+import { Button, Card, Center } from '../../components'
+import { Distro } from '../../data'
+import { generateScore, sortDistros } from './algorithm'
+
+const DistroView = ({
+  distro,
+  score,
+  maxScore,
+}: {
+  distro: Distro
+  score: number
+  maxScore: number
+}) => (
+  <Card type="filled" title={distro.name} subtitle={`${score} / ${maxScore}`} />
+)
 
 export const Done: ViewFc = ({ prevData, onPrev }) => {
-  console.log(sortDistros(prevData))
+  const [distros, _setDistros] = useState(sortDistros(prevData))
+  console.log(distros)
 
   return (
     <div>
-      <h1>Done</h1>
-      <p>{JSON.stringify(prevData)}</p>
-      <p>{JSON.stringify(distros)}</p>
+      <h1>Our recommendation</h1>
+      <p>
+        The distro listed below is our recommendation for what we can find out
+        about you. If you don't think it is right, you can see more by clicking
+        the 'View more' button
+      </p>
+
+      <Center>
+        <DistroView
+          distro={distros[0].distro}
+          score={distros[0].score}
+          maxScore={generateScore(prevData, prevData as any)}
+        />
+      </Center>
+
       <Button onClick={onPrev} text="Back" type="text"></Button>
     </div>
   )

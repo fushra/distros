@@ -7,8 +7,8 @@ import viewStyle from './views.module.css'
 
 interface PossibleGlobalData {
   experienceLevel: TechExperienceAmount
-  usage: UsageType[]
-  preferredLookAndFeel: PreferredLookAndFeel
+  preferredAppCatagories: UsageType[]
+  lookAndFeel: PreferredLookAndFeel
   customisability: Customisability
 }
 

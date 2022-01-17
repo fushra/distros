@@ -14,7 +14,7 @@ export enum PreferredLookAndFeel {
 export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext }) => {
   const [preferredLookAndFeel, setPreferredLookAndFeel] =
     useState<PreferredLookAndFeel>(
-      prevData.preferredLookAndFeel || PreferredLookAndFeel.Mac
+      prevData.lookAndFeel || PreferredLookAndFeel.Mac
     )
 
   return (
@@ -61,7 +61,7 @@ export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext }) => {
           onClick={() =>
             onNext({
               ...prevData,
-              preferredLookAndFeel,
+              lookAndFeel: preferredLookAndFeel,
             })
           }
         />

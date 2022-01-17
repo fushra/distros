@@ -51,25 +51,25 @@ const customisabilityValue = (customisability: Customisability) => {
   return val
 }
 
-function generateScore(userInput: GlobalData, distro: Distro): number {
+export function generateScore(userInput: GlobalData, distro: Distro): number {
   let score = 0
 
   if (userInput.experienceLevel) {
     const userExperience = techExperienceValue(userInput.experienceLevel)
-    const distroExperience = techExperienceValue(distro.recommendedExperience)
+    const distroExperience = techExperienceValue(distro.experienceLevel)
 
     const diff = Math.abs(userExperience - distroExperience)
     // Experience level should be heavily weighted
     score += (3 - diff) * 2
   }
 
-  if (userInput.preferredLookAndFeel) {
-    score += userInput.preferredLookAndFeel === distro.lookAndFeel ? 2 : 0
+  if (userInput.lookAndFeel) {
+    score += userInput.lookAndFeel === distro.lookAndFeel ? 2 : 0
   }
 
-  if (userInput.usage) {
+  if (userInput.preferredAppCatagories) {
     const duplicateCount = intersection(
-      userInput.usage,
+      userInput.preferredAppCatagories,
       distro.preferredAppCatagories
     )
     score += duplicateCount.length
@@ -86,11 +86,17 @@ function generateScore(userInput: GlobalData, distro: Distro): number {
   return score
 }
 
-export function sortDistros(userInput: GlobalData) {
+export type DistroWithScore = {
+  distro: Distro
+  score: number
+}
+
+export function sortDistros(userInput: GlobalData): DistroWithScore[] {
   return distros
     .map((distro) => ({
       distro,
       score: generateScore(userInput, distro),
     }))
     .sort((a, b) => a.score - b.score)
+    .reverse()
 }

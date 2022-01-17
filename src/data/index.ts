@@ -21,7 +21,7 @@ export interface Distro {
   downloadWebpage: string
   desktopEnvironment: DesktopEnvironment
   toolkit: Toolkit
-  recommendedExperience: TechExperienceAmount
+  experienceLevel: TechExperienceAmount
   preferredAppCatagories: UsageType[]
   lookAndFeel: PreferredLookAndFeel
   customisability: Customisability

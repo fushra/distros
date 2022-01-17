@@ -12,7 +12,7 @@ export const KDE = {
    * KDE is still a touch messy and hard to wrap your head around, although it
    * is improving, so it gets an intermediate recommendation for now
    */
-  recommendedExperience: TechExperienceAmount.intermediate,
+  experienceLevel: TechExperienceAmount.intermediate,
   /**
    * KDE has really great performance when it comes to games because of a number
    * of optimizations they have made to their compositor. Kdenlive is one of the

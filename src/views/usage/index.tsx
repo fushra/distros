@@ -17,7 +17,9 @@ export enum UsageType {
 }
 
 export const Usage: ViewFc = ({ prevData, onPrev, onNext }) => {
-  const [usage, setUsages] = useState<UsageType[]>(prevData.usage || [])
+  const [usage, setUsages] = useState<UsageType[]>(
+    prevData.preferredAppCatagories || []
+  )
 
   function changeCurrentUsage(usageType: UsageType) {
     if (usage.includes(usageType)) {
@@ -110,7 +112,7 @@ export const Usage: ViewFc = ({ prevData, onPrev, onNext }) => {
           onClick={() => {
             onNext({
               ...prevData,
-              usage,
+              preferredAppCatagories: usage,
             })
           }}
         />

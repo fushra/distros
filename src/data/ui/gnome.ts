@@ -12,7 +12,7 @@ export const Gnome = {
   /**
    * Gnome is a really slick user experience
    */
-  recommendedExperience: TechExperienceAmount.none,
+  experienceLevel: TechExperienceAmount.none,
   /**
    *
    */
