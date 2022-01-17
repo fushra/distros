@@ -19,10 +19,6 @@
   margin: 0;
 }
 
-.buttons button {
-  float: right;
-}
-
 /* Types */
 .filled {
   background-color: var(--color-surface-variant);

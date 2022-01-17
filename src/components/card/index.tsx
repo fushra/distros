@@ -41,7 +41,11 @@ export const Card = ({
       {title && <h2>{title}</h2>}
       {subtitle && <h3>{subtitle}</h3>}
       {text && <p>{text}</p>}
-      {buttons && <ButtonGrid className={style.buttons}>{buttons}</ButtonGrid>}
+      {buttons && (
+        <ButtonGrid className={style.buttons} justify="flex-end">
+          {buttons}
+        </ButtonGrid>
+      )}
     </div>
   </Ripples>
 )
