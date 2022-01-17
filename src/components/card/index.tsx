@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import { CSSProperties } from 'react'
 import { ReactNode } from 'react'
 import Ripples from 'react-ripples'
 
@@ -18,6 +20,8 @@ export const Card = ({
   onClick,
   img,
   imgAlt,
+  children,
+  style: cardStyle,
 }: {
   buttons?: ReactNode
   title?: string
@@ -27,7 +31,9 @@ export const Card = ({
   state?: CardState
   img?: string
   imgAlt?: string
+  children?: JSX.Element
   onClick?: () => void
+  style?: CSSProperties
 }) => (
   <Ripples>
     <div
@@ -35,8 +41,9 @@ export const Card = ({
       onClick={() => {
         if (onClick) onClick()
       }}
+      style={cardStyle}
     >
-      {img && <img src={img} alt={imgAlt} />}
+      {img && <Image src={img} alt={imgAlt} />}
 
       {title && <h2>{title}</h2>}
       {subtitle && <h3>{subtitle}</h3>}
@@ -46,6 +53,8 @@ export const Card = ({
           {buttons}
         </ButtonGrid>
       )}
+
+      {children}
     </div>
   </Ripples>
 )

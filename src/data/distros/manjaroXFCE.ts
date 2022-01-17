@@ -4,8 +4,13 @@ import { XFCE } from '../ui/xfce'
 
 const manjaroXFCE: Distro = {
   name: 'Manjaro XFCE',
+  id: 'manjaro-xfce',
   logo: 'https://manjaro.org/img/logo.svg',
   downloadWebpage: 'https://manjaro.org/download/',
+
+  shortDescription:
+    'The manjaro edition for people who want a reliable and fast desktop',
+  longDescriptionPath: 'src/data/descriptions/manjaroXFCE.md',
 
   ...XFCE,
 
@@ -17,6 +22,8 @@ const manjaroXFCE: Distro = {
 
   screenShots: [],
   videos: ['https://youtu.be/I6WgT7JkkQk'],
+
+  dataContributors: ['trickypr'],
 }
 
 export default manjaroXFCE

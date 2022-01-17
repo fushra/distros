@@ -4,6 +4,7 @@ import { Gnome } from '../ui/gnome'
 
 const zorinCore: Distro = {
   name: 'Zorin OS Core',
+  id: 'zorin-core',
   logo: 'https://assets.zorincdn.com/zorin.com/images/nav/logo.svg',
   downloadWebpage: 'https://zorin.com/os/download/',
 
@@ -16,6 +17,8 @@ const zorinCore: Distro = {
 
   screenShots: ['https://assets.zorincdn.com/zorin.com/images/home/speed.png'],
   videos: [],
+
+  dataContributors: ['trickypr'],
 }
 
 export default zorinCore

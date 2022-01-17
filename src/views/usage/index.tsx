@@ -3,17 +3,17 @@ import { ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
 
 export enum UsageType {
-  WebBrowsing = 'web browsing',
-  Email = 'email',
-  DocumentEditing = 'document editing',
+  WebBrowsing = 'Web browsing',
+  Email = 'Email',
+  DocumentEditing = 'Document editing',
 
-  PhotoEditing = 'photo editing',
-  VideoEditing = 'video editing',
-  AudioEditing = 'audio editing',
-  Programing = 'programing',
+  PhotoEditing = 'Photo editing',
+  VideoEditing = 'Video editing',
+  AudioEditing = 'Audio editing',
+  Programing = 'Programing',
 
-  SinglePlayerGaming = 'single player gaming',
-  MultiplayerGaming = 'multiplayer gaming',
+  SinglePlayerGaming = 'Single player gaming',
+  MultiplayerGaming = 'Multiplayer gaming',
 }
 
 export const Usage: ViewFc = ({ prevData, onPrev, onNext }) => {

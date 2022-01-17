@@ -17,7 +17,12 @@ import { DesktopEnvironment, Toolkit } from './enum'
 
 export interface Distro {
   name: string
+  id: string
   logo: string
+
+  shortDescription: string
+  longDescriptionPath: string
+
   downloadWebpage: string
   desktopEnvironment: DesktopEnvironment
   toolkit: Toolkit
@@ -27,6 +32,7 @@ export interface Distro {
   customisability: Customisability
   screenShots: string[]
   videos: string[]
+  dataContributors: string[]
 }
 
 let internalDistros: Distro[] = [

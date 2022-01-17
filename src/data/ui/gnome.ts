@@ -17,7 +17,6 @@ export const Gnome = {
    *
    */
   preferredAppCatagories: [
-    UsageType.WebBrowsing,
     UsageType.DocumentEditing,
     UsageType.Email,
     UsageType.PhotoEditing,

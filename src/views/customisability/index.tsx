@@ -3,7 +3,7 @@ import { atLeastIntermediate, requiresSpecific, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
 
 export enum Customisability {
-  limited = 'limited',
+  limited = 'Wallpaper',
   /**
    * NOT TO BE USER EXPOSED. Used to represent a desktop where some apps accept
    * theming and some apps do not. This appears to be the case for gtk4 desktops
@@ -15,16 +15,16 @@ export enum Customisability {
    * Also, these desktops cannot be advanced beyond partial intermediate, even if
    * they have advanced or partial advanced functionality
    */
-  partialIntermediate = 'partial intermediate',
-  intermediate = 'intermediate',
+  partialIntermediate = 'Broken theming',
+  intermediate = 'Themable',
 
   /**
    * NOT TO BE USER EXPOSED. Used to represent a desktop where some panels, but not
    * all can be replaced or desktops where it is a real hassle to do it. Add to
    * review notes if you give something this
    */
-  partialAdvanced = 'partial advanced',
-  advanced = 'advanced',
+  partialAdvanced = 'Partial layout',
+  advanced = 'Full layout',
 }
 
 export const Customization: ViewFc = ({

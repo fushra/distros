@@ -3,8 +3,13 @@ import { KDE } from '../ui/kde'
 
 const manjaroKDE: Distro = {
   name: 'Manjaro KDE',
+  id: 'manjaro-kde',
   logo: 'https://manjaro.org/img/logo.svg',
   downloadWebpage: 'https://manjaro.org/download/',
+
+  shortDescription:
+    'The manjaro edition with a built-in interface to easily access and install themes, widgets, etc. While very user-friendly and certainly flashy',
+  longDescriptionPath: 'src/data/descriptions/manjaroKDE.md',
 
   /**
    * Grab the defaults for the desktop environment
@@ -13,6 +18,8 @@ const manjaroKDE: Distro = {
 
   screenShots: [],
   videos: ['https://youtu.be/Mr9TkovpaME'],
+
+  dataContributors: ['trickypr'],
 }
 
 export default manjaroKDE
