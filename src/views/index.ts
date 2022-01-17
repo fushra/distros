@@ -45,4 +45,7 @@ export const viewDefaultStyle = viewStyle
 
 export * from './welcome'
 export * from './techExperience'
+export * from './usage'
+export * from './LookAndFeel'
+export * from './customisability'
 export * from './done'
