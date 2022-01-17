@@ -60,24 +60,4 @@ internalDistros = internalDistros.map((distro) => {
   return distro
 })
 
-// Linters for various issues that should be checked for and corrected before data
-// is exported
-internalDistros.forEach((distros) => {
-  // Youtube links should **ONLY** be youtu.be links for the sake of being easy
-  // to parse and should include the full https://youtu.be/ part
-  distros.videos.forEach((video, index) => {
-    if (video.includes('youtube.com')) {
-      console.warn(
-        `WARN - Youtube links should only be youtu.be links (distro: ${distros.name}, video: ${video}, index: ${index})`
-      )
-    }
-
-    if (video.includes('youtu.be') && !video.includes('https://youtu.be/')) {
-      console.warn(
-        `WARN - youtu.be links must be full links (i.e. https://youtu.be/...) (distro: ${distros.name}, video: ${video}, index: ${index})`
-      )
-    }
-  })
-})
-
 export const distros = internalDistros
