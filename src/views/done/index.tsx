@@ -13,11 +13,25 @@ const DistroView = ({
   score: number
   maxScore: number
 }) => (
-  <Card type="filled" title={distro.name} subtitle={`${score} / ${maxScore}`} />
+  <Card
+    type="filled"
+    title={distro.name}
+    subtitle={`${score} / ${maxScore}`}
+    buttons={
+      <>
+        <Button text="Learn More" type="text" />
+        <Button
+          text="Download"
+          type="filled-primary"
+          onClick={() => window.open(distro.downloadWebpage, '_blank')}
+        />
+      </>
+    }
+  />
 )
 
 export const Done: ViewFc = ({ prevData, onPrev }) => {
-  const [distros, _setDistros] = useState(sortDistros(prevData))
+  const [distros] = useState(sortDistros(prevData))
   console.log(distros)
 
   return (

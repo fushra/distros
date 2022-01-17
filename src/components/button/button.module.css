@@ -6,34 +6,35 @@
   background: none;
   /* Max out the border radius */
   border-radius: 200px;
+  cursor: pointer;
 }
 
-.filled-primary {
+.tonal-primary {
   background-color: var(--color-primary-container);
   color: var(--color-on-primary-container);
 }
 
-.filled-secondary {
+.tonal-secondary {
   background-color: var(--color-secondary-container);
   color: var(--color-on-secondary-container);
 }
 
-.filled-tertiary {
+.tonal-tertiary {
   background-color: var(--color-tertiary-container);
   color: var(--color-on-tertiary-container);
 }
 
-.tonal-primary {
+.filled-primary {
   background-color: var(--color-primary);
   color: var(--color-on-primary);
 }
 
-.tonal-secondary {
+.filled-secondary {
   background-color: var(--color-secondary);
   color: var(--color-on-secondary);
 }
 
-.tonal-tertiary {
+.filled-tertiary {
   background-color: var(--color-tertiary);
   color: var(--color-on-tertiary);
 }
