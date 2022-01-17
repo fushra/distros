@@ -13,6 +13,8 @@ type Props = Distro & {
 }
 
 const DistroAboutPage = ({ distro }: { distro: Props }) => {
+  if (!distro) return <div></div>
+
   return (
     <div style={{ textAlign: 'left', maxWidth: 1080, margin: 'auto' }}>
       <div
@@ -149,6 +151,6 @@ export async function getStaticProps(distroID: { params: { id: string } }) {
 export async function getStaticPaths() {
   return {
     paths: distros.map((distro) => ({ params: { id: distro.id } })),
-    fallback: true,
+    fallback: false,
   }
 }
