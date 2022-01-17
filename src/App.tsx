@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div style={{ height: '100vh' }}>
-      <Center>
+      <Center childStyle={{ maxWidth: 780 }}>
         <ViewToRender
           prevData={data}
           fromPrev={goingBack}

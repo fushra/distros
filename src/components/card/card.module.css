@@ -2,6 +2,8 @@
   border-radius: 12px;
   padding: 16px;
   max-width: 250px;
+  min-width: 230px;
+  text-align: left;
 }
 
 .card img {
@@ -11,8 +13,10 @@
   width: calc(100% + 32px);
 }
 
-.card h2 {
-  margin: 0 8px;
+.card h2,
+.card h3,
+.card p {
+  margin: 0;
 }
 
 .buttons button {
