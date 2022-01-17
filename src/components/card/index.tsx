@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { CSSProperties } from 'react'
 import { ReactNode } from 'react'
 import Ripples from 'react-ripples'
@@ -43,7 +42,7 @@ export const Card = ({
       }}
       style={cardStyle}
     >
-      {img && <Image src={img} alt={imgAlt} />}
+      {img && <img src={img} alt={imgAlt} />}
 
       {title && <h2>{title}</h2>}
       {subtitle && <h3>{subtitle}</h3>}

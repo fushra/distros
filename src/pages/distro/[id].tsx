@@ -6,6 +6,7 @@ import { join } from 'path'
 
 import { Distro, distros } from '../../data'
 import { Button, Card, CardGrid } from '../../components'
+import { Customisability } from '../../views'
 
 type Props = Distro & {
   longDescription: string
@@ -64,9 +65,16 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
           {distro.screenShots.map((screenshot) => (
             <Card
               type={'filled'}
-              style={{ padding: 0, width: 560, height: 315, maxWidth: 560 }}
+              style={{ height: 315, maxWidth: 560, boxSizing: 'border-box' }}
             >
-              <img src={screenshot} />
+              <img
+                src={screenshot}
+                style={{
+                  height: 'calc(100% + 32px)',
+                  marginBottom: -16,
+                  display: 'block',
+                }}
+              />
             </Card>
           ))}
         </CardGrid>
@@ -97,7 +105,16 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
         ))}
       </CardGrid>
 
-      <p>Data contributed by: {distro.dataContributors}</p>
+      <p>Data contributed by: {distro.dataContributors}.</p>
+
+      {distro.customisability === Customisability.partialIntermediate && (
+        <p>
+          GTK 4 appears to have introduced a bug that leads to themes not being
+          applied. All distros that are marked as using GTK will receive the tag
+          `Broken theming` until this issue is fixed, even if they do not use
+          gtk 4
+        </p>
+      )}
     </div>
   )
 }

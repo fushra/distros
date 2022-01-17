@@ -27,7 +27,7 @@ const popOS: Distro = {
   ],
 
   screenShots: [],
-  videos: [],
+  videos: ['https://youtu.be/y-uUv1jkKOQ'],
 
   dataContributors: ['trickypr'],
 }

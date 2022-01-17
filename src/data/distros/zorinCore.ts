@@ -8,6 +8,10 @@ const zorinCore: Distro = {
   logo: 'https://assets.zorincdn.com/zorin.com/images/nav/logo.svg',
   downloadWebpage: 'https://zorin.com/os/download/',
 
+  shortDescription:
+    'Zorin OS is the alternative to Windows and macOS designed to make your computer faster, more powerful, secure, and privacy-respecting',
+  longDescriptionPath: 'src/data/descriptions/zorinCore.md',
+
   ...Gnome,
 
   /**
@@ -16,7 +20,7 @@ const zorinCore: Distro = {
   lookAndFeel: PreferredLookAndFeel.Windows10,
 
   screenShots: ['https://assets.zorincdn.com/zorin.com/images/home/speed.png'],
-  videos: [],
+  videos: ['https://youtu.be/pgjHCGgitiU'],
 
   dataContributors: ['trickypr'],
 }

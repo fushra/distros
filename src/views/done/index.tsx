@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import { ViewFc } from '..'
-import { Button, Card, Center } from '../../components'
+import { Button, ButtonGrid, Card, CardGrid, Center } from '../../components'
 import { Distro } from '../../data'
 import { generateScore, sortDistros } from './algorithm'
 
@@ -17,9 +18,14 @@ const DistroView = ({
     type="filled"
     title={distro.name}
     subtitle={`${score} / ${maxScore}`}
+    text={distro.shortDescription}
     buttons={
       <>
-        <Button text="Learn More" type="text" />
+        <Link href={`/distro/${distro.id}`}>
+          <a>
+            <Button text="Learn More" type="text" />
+          </a>
+        </Link>
         <Button
           text="Download"
           type="filled-primary"
@@ -32,7 +38,9 @@ const DistroView = ({
 
 export const Done: ViewFc = ({ prevData, onPrev }) => {
   const [distros] = useState(sortDistros(prevData))
-  console.log(distros)
+  const [extraCount, setExtraCount] = useState(0)
+
+  const maxScore = generateScore(prevData, prevData as any)
 
   return (
     <div>
@@ -47,11 +55,31 @@ export const Done: ViewFc = ({ prevData, onPrev }) => {
         <DistroView
           distro={distros[0].distro}
           score={distros[0].score}
-          maxScore={generateScore(prevData, prevData as any)}
+          maxScore={maxScore}
         />
       </Center>
 
-      <Button onClick={onPrev} text="Back" type="text"></Button>
+      <CardGrid>
+        {distros
+          .filter((_val, index) => index !== 0)
+          .filter((_val, index) => index < extraCount)
+          .map((distro) => (
+            <DistroView
+              distro={distro.distro}
+              score={distro.score}
+              maxScore={maxScore}
+            />
+          ))}
+      </CardGrid>
+
+      <ButtonGrid>
+        <Button onClick={onPrev} text="Back" type="text"></Button>
+        <Button
+          type="filled-primary"
+          text="More options"
+          onClick={() => setExtraCount(() => extraCount + 1)}
+        />
+      </ButtonGrid>
     </div>
   )
 }

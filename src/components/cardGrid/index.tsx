@@ -15,6 +15,7 @@ export const CardGrid = ({
       gap: 8,
       flexWrap: 'wrap',
       justifyContent: justify,
+      marginTop: 16,
     }}
   >
     {' '}
