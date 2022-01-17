@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import { ViewFc } from '..'
+import { UsageType, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid, Center } from '../../components'
 import { Distro } from '../../data'
 import { generateScore, sortDistros } from './algorithm'
@@ -44,6 +44,16 @@ export const Done: ViewFc = ({ prevData, onPrev }) => {
 
   return (
     <div>
+      {prevData.preferredAppCatagories?.includes(
+        UsageType.MultiplayerGaming
+      ) && (
+        <Card
+          type="filled"
+          style={{ maxWidth: '100%', width: '100%' }}
+          text="Heads up! You selected multiplayer gaming, which has limited linux support. For the best experience, check protonDB before trying to play multiplayer games on linux"
+        />
+      )}
+
       <h1>Our recommendation</h1>
       <p>
         The distro listed below is our recommendation for what we can find out
