@@ -123,3 +123,27 @@ body {
   color: var(--color-on-background);
   text-align: center;
 }
+
+#__next {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  padding: 16px;
+}
+
+nav a {
+  color: var(--color-on-surface);
+  text-decoration: none;
+  padding: 12px 16px;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+nav a:hover {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container);
+  transition: color 200ms, background-color 200ms;
+}

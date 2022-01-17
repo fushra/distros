@@ -3,7 +3,7 @@ import { Button, Card, CardGrid } from '../../components'
 import { distros } from '../../data'
 
 export default () => (
-  <div style={{ textAlign: 'left', maxWidth: 870, margin: 'auto' }}>
+  <main style={{ textAlign: 'left', maxWidth: 870, margin: 'auto' }}>
     <h1>Distros</h1>
     <p>
       This is a big list of all the distros that the Fushra distro picker has
@@ -37,5 +37,5 @@ export default () => (
         />
       ))}
     </CardGrid>
-  </div>
+  </main>
 )

@@ -22,7 +22,7 @@ function App() {
   const ViewToRender = views[currentView]
 
   return (
-    <div style={{ height: '100vh' }}>
+    <main style={{ height: '100%' }}>
       <Center childStyle={{ maxWidth: 780 }}>
         <ViewToRender
           prevData={data}
@@ -38,7 +38,7 @@ function App() {
           }}
         />
       </Center>
-    </div>
+    </main>
   )
 }
 

@@ -16,7 +16,7 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
   if (!distro) return <div></div>
 
   return (
-    <div style={{ textAlign: 'left', maxWidth: 1080, margin: 'auto' }}>
+    <main style={{ textAlign: 'left', maxWidth: 1080, margin: 'auto' }}>
       <div
         style={{
           display: 'flex',
@@ -82,7 +82,7 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
         </CardGrid>
       </div>
 
-      <div dangerouslySetInnerHTML={{ __html: distro.longDescription }} />
+      <article dangerouslySetInnerHTML={{ __html: distro.longDescription }} />
 
       <h2>Specs</h2>
       <CardGrid justify="flex-start">
@@ -117,7 +117,7 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
           gtk 4
         </p>
       )}
-    </div>
+    </main>
   )
 }
 
