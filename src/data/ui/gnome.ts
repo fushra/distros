@@ -1,4 +1,4 @@
-import { DesktopEnvironment } from '..'
+import { DesktopEnvironment } from '../enum'
 import {
   Customisability,
   PreferredLookAndFeel,

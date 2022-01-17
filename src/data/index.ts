@@ -13,13 +13,7 @@ import manjaroKDE from './distros/manjaroKDE'
 import manjaroXFCE from './distros/manjaroXFCE'
 import popOS from './distros/popOS'
 import zorinCore from './distros/zorinCore'
-import { Toolkit } from './enum'
-
-export enum DesktopEnvironment {
-  KDE,
-  XFCE,
-  GNOME,
-}
+import { DesktopEnvironment, Toolkit } from './enum'
 
 export interface Distro {
   name: string

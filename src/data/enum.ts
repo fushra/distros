@@ -6,3 +6,9 @@ export enum Toolkit {
    */
   GNOME = 'GNOME',
 }
+
+export enum DesktopEnvironment {
+  KDE,
+  XFCE,
+  GNOME,
+}

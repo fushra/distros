@@ -1,11 +1,10 @@
-import { DesktopEnvironment } from '..'
 import {
   Customisability,
   PreferredLookAndFeel,
   TechExperienceAmount,
   UsageType,
 } from '../../views'
-import { Toolkit } from '../enum'
+import { Toolkit, DesktopEnvironment } from '../enum'
 
 export const KDE = {
   toolkit: Toolkit.QT,
