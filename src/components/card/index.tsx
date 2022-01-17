@@ -34,26 +34,24 @@ export const Card = ({
   onClick?: () => void
   style?: CSSProperties
 }) => (
-  <Ripples>
-    <div
-      className={`${style.card} ${style[type]} ${style[state]}`}
-      onClick={() => {
-        if (onClick) onClick()
-      }}
-      style={cardStyle}
-    >
-      {img && <img src={img} alt={imgAlt} />}
+  <div
+    className={`${style.card} ${style[type]} ${style[state]}`}
+    onClick={() => {
+      if (onClick) onClick()
+    }}
+    style={cardStyle}
+  >
+    {img && <img src={img} alt={imgAlt} />}
 
-      {title && <h2>{title}</h2>}
-      {subtitle && <h3>{subtitle}</h3>}
-      {text && <p>{text}</p>}
-      {buttons && (
-        <ButtonGrid className={style.buttons} justify="flex-end">
-          {buttons}
-        </ButtonGrid>
-      )}
+    {title && <h2>{title}</h2>}
+    {subtitle && <h3>{subtitle}</h3>}
+    {text && <p>{text}</p>}
+    {buttons && (
+      <ButtonGrid className={style.buttons} justify="flex-end">
+        {buttons}
+      </ButtonGrid>
+    )}
 
-      {children}
-    </div>
-  </Ripples>
+    {children}
+  </div>
 )

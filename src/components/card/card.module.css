@@ -1,4 +1,7 @@
 .card {
+  display: flex;
+  flex-direction: column;
+
   border-radius: 12px;
   padding: 16px;
   max-width: 250px;
@@ -21,6 +24,11 @@
 
 .card h3 {
   opacity: 0.7;
+}
+
+.buttons {
+  height: 100%;
+  align-items: flex-end;
 }
 
 /* Types */
