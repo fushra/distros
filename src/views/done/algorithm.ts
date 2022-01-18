@@ -79,8 +79,10 @@ export function generateScore(userInput: GlobalData, distro: Distro): number {
     const userCustomisability = customisabilityValue(userInput.customisability)
     const distroCustomisability = customisabilityValue(distro.customisability)
 
-    const diff = Math.abs(userCustomisability - distroCustomisability)
-    score += 4 - diff
+    const diff = distroCustomisability - userCustomisability
+
+    // Make distros more customizable than the users choice more heavily weighted
+    score += diff > 0 ? 4 - diff : (4 - Math.abs(diff)) / 2
   }
 
   return score
