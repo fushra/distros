@@ -8,6 +8,7 @@ import {
   TechExperienceAmount,
 } from '../views'
 import { UsageType } from '../views/usage'
+import archLinux from './distros/archLinux'
 import kdeNeon from './distros/KDENeon'
 import linuxMint from './distros/linuxMint'
 import manjaroGnome from './distros/manjaroGnome'
@@ -48,6 +49,7 @@ let internalDistros: Distro[] = [
   ubuntu,
   kdeNeon,
   linuxMint,
+  archLinux,
 ]
 
 // Apply a limited customisability set to everything using gnome because GTK 4

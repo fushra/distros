@@ -6,6 +6,7 @@ import { desktopUser } from '../generalCategory'
 export enum PreferredLookAndFeel {
   Mac = 'Mac like',
   Windows10 = 'Windows like',
+  None = 'User choice',
 }
 
 export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {

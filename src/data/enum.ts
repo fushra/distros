@@ -5,7 +5,7 @@ export enum Toolkit {
    * so it will get grouped with their desktop environment
    */
   GNOME = 'GNOME',
-  None = 'None',
+  None = 'Agnostic',
 }
 
 export enum DesktopEnvironment {
