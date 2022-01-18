@@ -67,7 +67,7 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
                     width: 560,
                     height: 315,
                     maxWidth: 560,
-                    marginRight: 16,
+                    marginRight: 40,
                   }}
                 >
                   <iframe
