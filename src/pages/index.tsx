@@ -1,5 +1,7 @@
+import Head from 'next/head'
 import React from 'react'
 import { Center } from '../components'
+import { distros } from '../data'
 import { Done, TechExperience, ViewFc, Welcome } from '../views'
 import { Customization } from '../views/customisability'
 import { LookAndFeel } from '../views/LookAndFeel'
@@ -23,6 +25,15 @@ function App() {
 
   return (
     <main style={{ height: '100%' }}>
+      <Head>
+        <title>Find your distro - Fushra distro picker</title>
+        <meta
+          name="description"
+          content={`Fushra distro picker is a tool designed to help you find a linux distro to suit your needs! We use an open source dataset and algorithm sort through ${distros.length} and find the perfect one for you!`}
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
       <Center childStyle={{ maxWidth: 780 }}>
         <ViewToRender
           prevData={data}
