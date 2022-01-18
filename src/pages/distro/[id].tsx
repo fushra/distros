@@ -14,6 +14,7 @@ type Props = Distro & {
 }
 
 const DistroAboutPage = ({ distro }: { distro: Props }) => {
+  // HACK: Nextjs has issues if this isn't included because for some reason, distro is sometimes undefined
   if (!distro) return <div></div>
 
   return (
@@ -59,6 +60,7 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
             if (video.includes('https://youtu.be/')) {
               return (
                 <Card
+                  key={video.replace('https://youtu.be/', '')}
                   type={'filled'}
                   style={{ padding: 0, width: 560, height: 315, maxWidth: 560 }}
                 >
@@ -66,7 +68,7 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
                     style={{ borderRadius: 12 }}
                     width="560"
                     height="315"
-                    src={`https://www.youtube.com/embed/${video.replace(
+                    src={`https://www.youtube-nocookie.com/embed/${video.replace(
                       'https://youtu.be/',
                       ''
                     )}`}
@@ -83,6 +85,7 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
           })}
           {distro.screenShots.map((screenshot) => (
             <Card
+              key={screenshot}
               type={'filled'}
               style={{ height: 315, maxWidth: 560, boxSizing: 'border-box' }}
             >
@@ -120,7 +123,12 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
           subtitle="Customisability"
         />
         {distro.preferredAppCatagories.map((category) => (
-          <Card type="filled" title={category} subtitle="Good for" />
+          <Card
+            type="filled"
+            title={category}
+            subtitle="Good for"
+            key={category}
+          />
         ))}
       </CardGrid>
 

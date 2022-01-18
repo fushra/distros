@@ -27,6 +27,7 @@ export default () => (
     <CardGrid justify="flex-start">
       {distros.map((distro) => (
         <Card
+          key={distro.id}
           type={'filled'}
           title={distro.name}
           text={distro.shortDescription}
