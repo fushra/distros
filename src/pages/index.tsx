@@ -42,6 +42,7 @@ function App() {
           property="og:description"
           content={`Fushra distro picker is a tool designed to help you find a linux distro to suit your needs! We use an open source dataset and algorithm sort through ${distros.length} and find the perfect one for you!`}
         />
+        <meta property="og:image" content="/public/og/index.1.png" />
       </Head>
 
       <Center childStyle={{ maxWidth: 780 }}>
