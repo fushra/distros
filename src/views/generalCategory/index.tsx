@@ -5,7 +5,7 @@ import { GeneralCategoryInfo } from '../../data/enum'
 
 export function desktopUser(data: GlobalData): boolean {
   return (
-    data.generalCategory === GeneralCategoryInfo.Desktop ||
+    data.generalCategory !== GeneralCategoryInfo.Desktop &&
     !!data.generalCategory
   )
 }

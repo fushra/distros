@@ -53,8 +53,6 @@ const customisabilityValue = (customisability: Customisability) => {
 }
 
 export function generateScore(userInput: GlobalData, distro: Distro): number {
-  console.log(userInput)
-
   let score = 0
 
   // Return a score of zero if the general category is incorrect
