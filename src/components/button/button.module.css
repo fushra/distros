@@ -44,6 +44,10 @@
 }
 
 .text {
-  /* Text has no style. This is just a placeholder */
   color: var(--color-on-background);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.text:hover {
+  background-color: rgba(var(--color-on-surface-variant-rgb), 0.2);
 }
