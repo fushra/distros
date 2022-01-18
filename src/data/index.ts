@@ -9,6 +9,7 @@ import {
 } from '../views'
 import { UsageType } from '../views/usage'
 import kdeNeon from './distros/KDENeon'
+import linuxMint from './distros/linuxMint'
 import manjaroGnome from './distros/manjaroGnome'
 import manjaroKDE from './distros/manjaroKDE'
 import manjaroXFCE from './distros/manjaroXFCE'
@@ -46,6 +47,7 @@ let internalDistros: Distro[] = [
   zorinCore,
   ubuntu,
   kdeNeon,
+  linuxMint,
 ]
 
 // Apply a limited customisability set to everything using gnome because GTK 4

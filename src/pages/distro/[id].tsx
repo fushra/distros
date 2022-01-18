@@ -55,7 +55,10 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
       </div>
 
       <div style={{ overflowX: 'scroll' }}>
-        <CardGrid justify="flex-start" style={{ flexWrap: 'nowrap' }}>
+        <CardGrid
+          justify="flex-start"
+          style={{ flexWrap: 'nowrap', width: 'max-content' }}
+        >
           {distro.videos.map((video) => {
             if (video.includes('https://youtu.be/')) {
               return (
@@ -67,7 +70,6 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
                     width: 560,
                     height: 315,
                     maxWidth: 560,
-                    marginRight: 40,
                   }}
                 >
                   <iframe

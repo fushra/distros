@@ -12,6 +12,7 @@ export enum DesktopEnvironment {
   KDE = 'KDE',
   XFCE = 'XFCE',
   GNOME = 'GNOME',
+  Cinnamon = 'Cinnamon',
   None = 'Terminal',
 }
 
