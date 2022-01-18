@@ -129,6 +129,10 @@ body {
   justify-content: space-between;
 }
 
+a {
+  color: var(--color-primary) !important;
+}
+
 #__next {
   display: flex;
   flex-direction: column;
