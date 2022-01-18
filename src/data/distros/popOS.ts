@@ -9,7 +9,7 @@ const popOS: Distro = {
   downloadWebpage: 'https://pop.system76.com/',
 
   shortDescription:
-    'A gaming a productivity focused distro created by system76',
+    'A gaming and productivity focused distro created by system76',
   longDescriptionPath: 'src/data/descriptions/popOS.md',
 
   ...Gnome,
