@@ -43,6 +43,7 @@ export const TechExperience: ViewFc = ({ prevData, onNext, onPrev }) => {
           title="Little / none"
           state={selected === TechExperienceAmount.none ? 'focused' : 'none'}
           onClick={() => setSelected(TechExperienceAmount.none)}
+          interactive
         />
         <Card
           type={'filled'}
@@ -50,6 +51,7 @@ export const TechExperience: ViewFc = ({ prevData, onNext, onPrev }) => {
           text="Open programs and files, and browse the internet"
           state={selected === TechExperienceAmount.basic ? 'focused' : 'none'}
           onClick={() => setSelected(TechExperienceAmount.basic)}
+          interactive
         />
         <Card
           type={'filled'}
@@ -59,6 +61,7 @@ export const TechExperience: ViewFc = ({ prevData, onNext, onPrev }) => {
             selected === TechExperienceAmount.intermediate ? 'focused' : 'none'
           }
           onClick={() => setSelected(TechExperienceAmount.intermediate)}
+          interactive
         />
         <Card
           type={'filled'}
@@ -68,6 +71,7 @@ export const TechExperience: ViewFc = ({ prevData, onNext, onPrev }) => {
             selected === TechExperienceAmount.advanced ? 'focused' : 'none'
           }
           onClick={() => setSelected(TechExperienceAmount.advanced)}
+          interactive
         />
       </CardGrid>
 

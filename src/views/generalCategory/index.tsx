@@ -31,6 +31,7 @@ export const GeneralCategory: ViewFc = ({
           text="Use as a desktop computer with compatibility and stability in mind"
           state={category === GeneralCategoryInfo.Desktop ? 'focused' : 'none'}
           onClick={() => setCategory(GeneralCategoryInfo.Desktop)}
+          interactive
         />
         <Card
           type="filled"
@@ -40,6 +41,7 @@ export const GeneralCategory: ViewFc = ({
             category === GeneralCategoryInfo.Enthusiast ? 'focused' : 'none'
           }
           onClick={() => setCategory(GeneralCategoryInfo.Enthusiast)}
+          interactive
         />
         <Card
           type="filled"
@@ -47,6 +49,7 @@ export const GeneralCategory: ViewFc = ({
           text="Hosting online applications or scripts that require a high degree of stability and security"
           state={category === GeneralCategoryInfo.Server ? 'focused' : 'none'}
           onClick={() => setCategory(GeneralCategoryInfo.Server)}
+          interactive
         />
       </CardGrid>
 

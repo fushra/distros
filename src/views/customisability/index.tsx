@@ -59,6 +59,7 @@ export const Customization: ViewFc = ({
           state={
             customisability === Customisability.limited ? 'focused' : 'none'
           }
+          interactive
         />
         <Card
           type={'filled'}
@@ -70,6 +71,7 @@ export const Customization: ViewFc = ({
               ? 'focused'
               : 'none'
           }
+          interactive
         />
         <Card
           type={'filled'}
@@ -79,6 +81,7 @@ export const Customization: ViewFc = ({
           state={
             customisability === Customisability.advanced ? 'focused' : 'none'
           }
+          interactive
         />
       </CardGrid>
 

@@ -44,18 +44,21 @@ export const Usage: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
           type="filled"
           onClick={() => changeCurrentUsage(UsageType.WebBrowsing)}
           state={usage.includes(UsageType.WebBrowsing) ? 'focused' : 'none'}
+          interactive
         />
         <Card
           title="Email"
           type="filled"
           onClick={() => changeCurrentUsage(UsageType.Email)}
           state={usage.includes(UsageType.Email) ? 'focused' : 'none'}
+          interactive
         />
         <Card
           title="Document editing"
           type="filled"
           onClick={() => changeCurrentUsage(UsageType.DocumentEditing)}
           state={usage.includes(UsageType.DocumentEditing) ? 'focused' : 'none'}
+          interactive
         />
       </CardGrid>
 
@@ -66,24 +69,28 @@ export const Usage: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
           type="filled"
           onClick={() => changeCurrentUsage(UsageType.PhotoEditing)}
           state={usage.includes(UsageType.PhotoEditing) ? 'focused' : 'none'}
+          interactive
         />
         <Card
           title="Video editing"
           type="filled"
           onClick={() => changeCurrentUsage(UsageType.VideoEditing)}
           state={usage.includes(UsageType.VideoEditing) ? 'focused' : 'none'}
+          interactive
         />
         <Card
           title="Audio editing"
           type="filled"
           onClick={() => changeCurrentUsage(UsageType.AudioEditing)}
           state={usage.includes(UsageType.AudioEditing) ? 'focused' : 'none'}
+          interactive
         />
         <Card
           title="Programing"
           type="filled"
           onClick={() => changeCurrentUsage(UsageType.Programing)}
           state={usage.includes(UsageType.Programing) ? 'focused' : 'none'}
+          interactive
         />
       </CardGrid>
 
@@ -96,6 +103,7 @@ export const Usage: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
           state={
             usage.includes(UsageType.SinglePlayerGaming) ? 'focused' : 'none'
           }
+          interactive
         />
         <Card
           title="Multiplayer gaming"
@@ -104,6 +112,7 @@ export const Usage: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
           state={
             usage.includes(UsageType.MultiplayerGaming) ? 'focused' : 'none'
           }
+          interactive
         />
       </CardGrid>
 

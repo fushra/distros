@@ -38,7 +38,7 @@
 }
 
 /* States */
-.card:hover,
+.card.interactive:hover,
 .focused {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   background-color: rgba(var(--color-on-surface-variant-rgb), 0.4);

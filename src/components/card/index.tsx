@@ -21,6 +21,7 @@ export const Card = ({
   imgAlt,
   children,
   style: cardStyle,
+  interactive = false,
 }: {
   buttons?: ReactNode
   title?: string
@@ -33,9 +34,12 @@ export const Card = ({
   children?: JSX.Element
   onClick?: () => void
   style?: CSSProperties
+  interactive?: boolean
 }) => (
   <div
-    className={`${style.card} ${style[type]} ${style[state]}`}
+    className={`${style.card} ${style[type]} ${style[state]} ${
+      interactive ? style.interactive : ''
+    }`}
     onClick={() => {
       if (onClick) onClick()
     }}

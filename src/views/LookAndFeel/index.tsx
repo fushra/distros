@@ -37,6 +37,7 @@ export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
               ? 'focused'
               : 'none'
           }
+          interactive
         />
         <Card
           type={'filled'}
@@ -49,6 +50,7 @@ export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
               ? 'focused'
               : 'none'
           }
+          interactive
         />
       </CardGrid>
 
