@@ -7,6 +7,7 @@ import { join } from 'path'
 import { Distro, distros } from '../../data'
 import { Button, Card, CardGrid } from '../../components'
 import { Customisability } from '../../views'
+import Head from 'next/head'
 
 type Props = Distro & {
   longDescription: string
@@ -17,6 +18,15 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
 
   return (
     <main style={{ textAlign: 'left', maxWidth: 1080, margin: 'auto' }}>
+      <Head>
+        <title>{distro.name} - Fushra distro picker</title>
+        <meta
+          name="description"
+          content={`Learn more about ${distro.name}. ${distro.shortDescription}`}
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
       <div
         style={{
           display: 'flex',

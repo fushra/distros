@@ -16,7 +16,8 @@ function MyApp({ Component, pageProps }: any) {
 
       <footer>
         &copy; GPL v3 TrickyPR and other contributors 2022. This website and the
-        data around it is free and open source. <a>Improve it on github</a>.
+        data around it is free and open source.{' '}
+        <a href="https://github.com/fushra/distros">Improve it on github</a>.
       </footer>
     </>
   )
