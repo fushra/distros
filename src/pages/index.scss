@@ -151,7 +151,7 @@ footer {
 }
 
 nav a {
-  color: var(--color-on-surface);
+  color: var(--color-on-surface) !important;
   text-decoration: none;
   padding: 12px 16px;
   display: inline-block;
@@ -160,6 +160,6 @@ nav a {
 
 nav a:hover {
   background-color: var(--color-primary-container);
-  color: var(--color-on-primary-container);
+  color: var(--color-on-primary-container) !important;
   transition: color 200ms, background-color 200ms;
 }
