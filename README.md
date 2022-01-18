@@ -23,7 +23,7 @@ The goal of this project is to simplify the process of a new user choosing to in
 
 ## Contributing
 
-We openly accept pull requests for bug fixes and reviewing distros. For instructions see the [contributor guidelines file](./CONTRIBUTING.md).
+We openly accept pull requests for bug fixes and reviewing distros. For instructions see the [contributor guidelines file](./CONTRIBUTING.md). If you don't want to write code or contribute data, but still want to help out, you can [sponsor me](https://github.com/sponsors/trickypr) to cover the costs of the domain.
 
 ## License
 
