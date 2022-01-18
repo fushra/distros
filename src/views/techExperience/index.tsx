@@ -3,10 +3,10 @@ import { GlobalData, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
 
 export enum TechExperienceAmount {
-  none = 'none',
-  basic = 'basic',
-  intermediate = 'intermediate',
-  advanced = 'advanced',
+  none = 'None',
+  basic = 'Basic',
+  intermediate = 'Intermediate',
+  advanced = 'Advanced',
 }
 
 // This is an exclusion rule for users that are under the intermediate level of

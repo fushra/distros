@@ -116,6 +116,11 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
       <CardGrid justify="flex-start">
         <Card
           type="filled"
+          title={distro.generalCategory}
+          subtitle="Distro type"
+        />
+        <Card
+          type="filled"
           title={distro.desktopEnvironment}
           subtitle="Desktop Environment"
         />
@@ -129,6 +134,11 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
           type="filled"
           title={distro.customisability}
           subtitle="Customisability"
+        />
+        <Card
+          type="filled"
+          title={distro.experienceLevel}
+          subtitle="Learning curve"
         />
         {distro.preferredAppCatagories.map((category) => (
           <Card

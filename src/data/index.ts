@@ -16,6 +16,7 @@ import manjaroKDE from './distros/manjaroKDE'
 import manjaroXFCE from './distros/manjaroXFCE'
 import popOS from './distros/popOS'
 import ubuntu from './distros/ubuntu'
+import ubuntuServer from './distros/ubuntuServer'
 import zorinCore from './distros/zorinCore'
 import { DesktopEnvironment, GeneralCategoryInfo, Toolkit } from './enum'
 
@@ -50,7 +51,8 @@ let internalDistros: Distro[] = [
   kdeNeon,
   linuxMint,
   archLinux,
-]
+  ubuntuServer,
+].sort((a, b) => a.name.localeCompare(b.name))
 
 // Apply a limited customisability set to everything using gnome because GTK 4
 // has broken themes and the gnome team seems to not be working on fixing that
