@@ -12,6 +12,7 @@ import manjaroGnome from './distros/manjaroGnome'
 import manjaroKDE from './distros/manjaroKDE'
 import manjaroXFCE from './distros/manjaroXFCE'
 import popOS from './distros/popOS'
+import ubuntu from './distros/ubuntu'
 import zorinCore from './distros/zorinCore'
 import { DesktopEnvironment, GeneralCategoryInfo, Toolkit } from './enum'
 
@@ -42,6 +43,7 @@ let internalDistros: Distro[] = [
   manjaroXFCE,
   popOS,
   zorinCore,
+  ubuntu,
 ]
 
 // Apply a limited customisability set to everything using gnome because GTK 4

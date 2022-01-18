@@ -1,13 +1,15 @@
-import { ReactNode } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 
 export type GridJustify = 'flex-start' | 'center' | 'flex-end'
 
 export const CardGrid = ({
   children,
   justify = 'center',
+  style,
 }: {
   children: ReactNode
   justify?: GridJustify
+  style?: CSSProperties
 }) => (
   <div
     style={{
@@ -16,6 +18,7 @@ export const CardGrid = ({
       flexWrap: 'wrap',
       justifyContent: justify,
       marginTop: 16,
+      ...style,
     }}
   >
     {' '}
