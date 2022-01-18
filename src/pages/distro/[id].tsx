@@ -25,6 +25,13 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
           content={`Learn more about ${distro.name}. ${distro.shortDescription}`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta
+          property="og:title"
+          content={`${distro.name}: Images, description and specs`}
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content={distro.shortDescription} />
       </Head>
 
       <div

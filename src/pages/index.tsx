@@ -32,6 +32,16 @@ function App() {
           content={`Fushra distro picker is a tool designed to help you find a linux distro to suit your needs! We use an open source dataset and algorithm sort through ${distros.length} and find the perfect one for you!`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta
+          property="og:title"
+          content={`Sort through ${distros.length} to find the perfect one for you`}
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content={`Fushra distro picker is a tool designed to help you find a linux distro to suit your needs! We use an open source dataset and algorithm sort through ${distros.length} and find the perfect one for you!`}
+        />
       </Head>
 
       <Center childStyle={{ maxWidth: 780 }}>
