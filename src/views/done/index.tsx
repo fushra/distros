@@ -75,6 +75,7 @@ export const Done: ViewFc = ({ prevData, onPrev }) => {
           .filter((_val, index) => index < extraCount)
           .map((distro) => (
             <DistroView
+              key={distro.distro.id}
               distro={distro.distro}
               score={distro.score}
               maxScore={maxScore}

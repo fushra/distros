@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { ViewFc } from '..'
+import { requiresSpecific, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
+import { desktopUser } from '../generalCategory'
 
 export enum UsageType {
   WebBrowsing = 'Web browsing',
@@ -16,7 +17,9 @@ export enum UsageType {
   MultiplayerGaming = 'Multiplayer gaming',
 }
 
-export const Usage: ViewFc = ({ prevData, onPrev, onNext }) => {
+export const Usage: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
+  requiresSpecific(prevData, fromPrev, onPrev, onNext, desktopUser)
+
   const [usage, setUsages] = useState<UsageType[]>(
     prevData.preferredAppCatagories || []
   )

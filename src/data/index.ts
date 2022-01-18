@@ -13,7 +13,7 @@ import manjaroKDE from './distros/manjaroKDE'
 import manjaroXFCE from './distros/manjaroXFCE'
 import popOS from './distros/popOS'
 import zorinCore from './distros/zorinCore'
-import { DesktopEnvironment, Toolkit } from './enum'
+import { DesktopEnvironment, GeneralCategoryInfo, Toolkit } from './enum'
 
 export interface Distro {
   name: string
@@ -30,6 +30,7 @@ export interface Distro {
   preferredAppCatagories: UsageType[]
   lookAndFeel: PreferredLookAndFeel
   customisability: Customisability
+  generalCategory: GeneralCategoryInfo
   screenShots: string[]
   videos: string[]
   dataContributors: string[]

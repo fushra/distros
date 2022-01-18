@@ -4,7 +4,7 @@ import {
   TechExperienceAmount,
   UsageType,
 } from '../../views'
-import { Toolkit, DesktopEnvironment } from '../enum'
+import { Toolkit, DesktopEnvironment, GeneralCategoryInfo } from '../enum'
 
 export const XFCE = {
   toolkit: Toolkit.GNOME,
@@ -32,4 +32,6 @@ export const XFCE = {
    */
   customisability: Customisability.partialIntermediate,
   desktopEnvironment: DesktopEnvironment.XFCE,
+  // Anything running XFCE is a desktop
+  generalCategory: GeneralCategoryInfo.Desktop,
 }

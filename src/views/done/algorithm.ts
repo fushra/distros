@@ -1,5 +1,6 @@
 import { Customisability, GlobalData, TechExperienceAmount } from '..'
 import { Distro, distros } from '../../data'
+import { GeneralCategoryInfo } from '../../data/enum'
 
 function intersection<T>(a: T[], b: T[]): T[] {
   return a
@@ -52,6 +53,14 @@ const customisabilityValue = (customisability: Customisability) => {
 }
 
 export function generateScore(userInput: GlobalData, distro: Distro): number {
+  // Return a score of zero if the general category is incorrect
+  if (
+    (userInput.generalCategory || GeneralCategoryInfo.Desktop) !==
+    (userInput.generalCategory || GeneralCategoryInfo.Desktop)
+  ) {
+    return 0
+  }
+
   let score = 0
 
   if (userInput.experienceLevel) {

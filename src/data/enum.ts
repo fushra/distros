@@ -5,10 +5,18 @@ export enum Toolkit {
    * so it will get grouped with their desktop environment
    */
   GNOME = 'GNOME',
+  None = 'None',
 }
 
 export enum DesktopEnvironment {
   KDE = 'KDE',
   XFCE = 'XFCE',
   GNOME = 'GNOME',
+  None = 'Terminal',
+}
+
+export enum GeneralCategoryInfo {
+  Desktop = 'Desktop',
+  Enthusiast = 'Enthusiast',
+  Server = 'Server',
 }

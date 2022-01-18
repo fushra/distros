@@ -4,12 +4,14 @@ import { Center } from '../components'
 import { distros } from '../data'
 import { Done, TechExperience, ViewFc, Welcome } from '../views'
 import { Customization } from '../views/customisability'
+import { GeneralCategory } from '../views/generalCategory'
 import { LookAndFeel } from '../views/LookAndFeel'
 import { Usage } from '../views/usage'
 
 const views: ViewFc[] = [
   Welcome,
   TechExperience,
+  GeneralCategory,
   Usage,
   LookAndFeel,
   Customization,

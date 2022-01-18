@@ -1,4 +1,4 @@
-import { DesktopEnvironment } from '../enum'
+import { DesktopEnvironment, GeneralCategoryInfo } from '../enum'
 import {
   Customisability,
   PreferredLookAndFeel,
@@ -41,4 +41,6 @@ export const Gnome = {
   customisability: Customisability.partialIntermediate,
 
   desktopEnvironment: DesktopEnvironment.GNOME,
+  // Anything running Gnome is a desktop
+  generalCategory: GeneralCategoryInfo.Desktop,
 }

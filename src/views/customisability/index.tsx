@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { atLeastIntermediate, requiresSpecific, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
+import { desktopUser } from '../generalCategory'
 
 export enum Customisability {
   limited = 'Wallpaper',
@@ -39,6 +40,7 @@ export const Customization: ViewFc = ({
 
   // Skip if the user has no or basic computer skills
   requiresSpecific(prevData, fromPrev, onPrev, onNext, atLeastIntermediate)
+  requiresSpecific(prevData, fromPrev, onPrev, onNext, desktopUser)
 
   return (
     <div>

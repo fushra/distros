@@ -18,6 +18,10 @@ export function atLeastIntermediate(data: GlobalData) {
   )
 }
 
+export function atLeastExpert(data: GlobalData) {
+  return data.experienceLevel !== TechExperienceAmount.advanced
+}
+
 export const TechExperience: ViewFc = ({ prevData, onNext, onPrev }) => {
   const [selected, setSelected] = useState(
     prevData.experienceLevel || TechExperienceAmount.none

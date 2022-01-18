@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { GeneralCategoryInfo } from '../data/enum'
 import { Customisability } from './customisability'
 import { PreferredLookAndFeel } from './LookAndFeel'
 import { TechExperienceAmount } from './techExperience'
@@ -10,6 +11,7 @@ interface PossibleGlobalData {
   preferredAppCatagories: UsageType[]
   lookAndFeel: PreferredLookAndFeel
   customisability: Customisability
+  generalCategory: GeneralCategoryInfo
 }
 
 export type GlobalData = Partial<PossibleGlobalData>

@@ -4,7 +4,7 @@ import {
   TechExperienceAmount,
   UsageType,
 } from '../../views'
-import { Toolkit, DesktopEnvironment } from '../enum'
+import { Toolkit, DesktopEnvironment, GeneralCategoryInfo } from '../enum'
 
 export const KDE = {
   toolkit: Toolkit.QT,
@@ -43,4 +43,6 @@ export const KDE = {
   customisability: Customisability.advanced,
 
   desktopEnvironment: DesktopEnvironment.KDE,
+  // Anything running kde is a desktop
+  generalCategory: GeneralCategoryInfo.Desktop,
 }
