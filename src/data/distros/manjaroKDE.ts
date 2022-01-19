@@ -1,4 +1,5 @@
 import { Distro } from '..'
+import { TechExperienceAmount } from '../../views'
 import { KDE } from '../ui/kde'
 
 const manjaroKDE: Distro = {
@@ -18,6 +19,8 @@ const manjaroKDE: Distro = {
 
   screenShots: [],
   videos: ['https://youtu.be/Mr9TkovpaME'],
+  // Manjaro needs more experience than most distros
+  experienceLevel: TechExperienceAmount.advanced,
 
   dataContributors: ['trickypr'],
 }

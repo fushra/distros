@@ -151,15 +151,6 @@ const DistroAboutPage = ({ distro }: { distro: Props }) => {
       </CardGrid>
 
       <p>Data contributed by: {distro.dataContributors}.</p>
-
-      {distro.customisability === Customisability.partialIntermediate && (
-        <p>
-          GTK 4 appears to have introduced a bug that leads to themes not being
-          applied. All distros that are marked as using GTK will receive the tag
-          `Broken theming` until this issue is fixed, even if they do not use
-          gtk 4
-        </p>
-      )}
     </main>
   )
 }

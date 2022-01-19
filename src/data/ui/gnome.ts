@@ -20,9 +20,7 @@ export const Gnome = {
     UsageType.DocumentEditing,
     UsageType.Email,
     UsageType.PhotoEditing,
-    // Not going to give Gnome any points for development because gnome builder
-    // seems to be basically unusable on my system for reasons I cannot entirely
-    // comprehend
+    UsageType.Programing,
     /**
      * Gnome has a default browser (unlike kde or xfce), so I will give it that
      * point even through it is horrible and you should avoid using it

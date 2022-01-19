@@ -69,13 +69,14 @@ export function generateScore(userInput: GlobalData, distro: Distro): number {
     const userExperience = techExperienceValue(userInput.experienceLevel)
     const distroExperience = techExperienceValue(distro.experienceLevel)
 
-    const diff = Math.abs(userExperience - distroExperience)
+    const diff = userExperience - distroExperience
     // Experience level should be heavily weighted
-    score += (3 - diff) * 2
+    score += diff < 0 ? 4 - diff * -1 : (4 - diff) * 3
   }
 
   if (userInput.lookAndFeel) {
-    score += userInput.lookAndFeel === distro.lookAndFeel ? 2 : 0
+    // Heavily weight look and feel
+    score += userInput.lookAndFeel === distro.lookAndFeel ? 4 : 0
   }
 
   if (userInput.preferredAppCatagories) {
@@ -90,10 +91,8 @@ export function generateScore(userInput: GlobalData, distro: Distro): number {
     const userCustomisability = customisabilityValue(userInput.customisability)
     const distroCustomisability = customisabilityValue(distro.customisability)
 
-    const diff = distroCustomisability - userCustomisability
-
-    // Make distros more customizable than the users choice more heavily weighted
-    score += diff > 0 ? 4 - diff : (4 - Math.abs(diff)) / 2
+    const diff = Math.abs(distroCustomisability - userCustomisability)
+    score += 4 - diff
   }
 
   return score

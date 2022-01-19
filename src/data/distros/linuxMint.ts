@@ -1,5 +1,5 @@
 import { Distro } from '..'
-import { UsageType } from '../../views'
+import { Customisability, PreferredLookAndFeel, UsageType } from '../../views'
 import { DesktopEnvironment } from '../enum'
 import { Gnome } from '../ui/gnome'
 
@@ -16,10 +16,12 @@ const linuxMint: Distro = {
   ...Gnome,
   preferredAppCatagories: [
     ...Gnome.preferredAppCatagories,
-    UsageType.Programing,
     UsageType.SinglePlayerGaming,
   ],
+  // Mint doesn't use gtk 4 so it escapes the theming trap
+  customisability: Customisability.intermediate,
   desktopEnvironment: DesktopEnvironment.Cinnamon,
+  lookAndFeel: PreferredLookAndFeel.Windows10,
 
   screenShots: [
     'https://cdn.statically.io/img/www.linuxmint.com/f=auto&w=560/pictures/screenshots/una/thumb_cinnamon.png',

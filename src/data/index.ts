@@ -54,21 +54,4 @@ let internalDistros: Distro[] = [
   ubuntuServer,
 ].sort((a, b) => a.name.localeCompare(b.name))
 
-// Apply a limited customisability set to everything using gnome because GTK 4
-// has broken themes and the gnome team seems to not be working on fixing that
-// bug
-internalDistros = internalDistros.map((distro) => {
-  if (distro.toolkit === Toolkit.GNOME) {
-    return {
-      ...distro,
-      customisability:
-        distro.customisability === Customisability.limited
-          ? Customisability.limited
-          : Customisability.partialIntermediate,
-    }
-  }
-
-  return distro
-})
-
 export const distros = internalDistros

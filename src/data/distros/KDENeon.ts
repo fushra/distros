@@ -4,7 +4,7 @@ import { KDE } from '../ui/kde'
 const kdeNeon: Distro = {
   name: 'KDE Neon',
   id: 'kde-neon',
-  logo: 'https://manjaro.org/img/logo.svg',
+  logo: '',
   downloadWebpage: 'https://neon.kde.org/download',
 
   shortDescription:

@@ -1,4 +1,5 @@
 import { Distro } from '..'
+import { TechExperienceAmount } from '../../views'
 import { Gnome } from '../ui/gnome'
 
 const manjaroGnome: Distro = {
@@ -15,6 +16,8 @@ const manjaroGnome: Distro = {
    * Grab the defaults for the desktop environment
    */
   ...Gnome,
+  // Manjaro needs more experience than most distros
+  experienceLevel: TechExperienceAmount.advanced,
 
   screenShots: [],
   videos: ['https://youtu.be/i2U2oZ1b4RQ'],
