@@ -71,7 +71,7 @@ export function generateScore(userInput: GlobalData, distro: Distro): number {
 
     const diff = userExperience - distroExperience
     // Experience level should be heavily weighted
-    score += diff < 0 ? 4 - diff * -1 : (4 - diff) * 3
+    score += diff < 0 ? 4 - diff * -1 : (4 - diff) * 2
   }
 
   if (userInput.lookAndFeel) {
