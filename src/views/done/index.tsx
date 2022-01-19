@@ -5,11 +5,19 @@ import { Button, ButtonGrid, Card, CardGrid, Center } from '../../components'
 import { Distro } from '../../data'
 import { generateScore, sortDistros } from './algorithm'
 
-const DistroView = ({ distro, score }: { distro: Distro; score: number }) => (
+const DistroView = ({
+  distro,
+  score,
+  maxScore,
+}: {
+  distro: Distro
+  score: number
+  maxScore: number
+}) => (
   <Card
     type="filled"
     title={distro.name}
-    subtitle={`${score}`}
+    subtitle={`${score} / ${maxScore}`}
     text={distro.shortDescription}
     buttons={
       <>
@@ -54,7 +62,11 @@ export const Done: ViewFc = ({ prevData, onPrev }) => {
       </p>
 
       <Center>
-        <DistroView distro={distros[0].distro} score={distros[0].score} />
+        <DistroView
+          distro={distros[0].distro}
+          score={distros[0].score}
+          maxScore={maxScore}
+        />
       </Center>
 
       <CardGrid>
@@ -66,6 +78,7 @@ export const Done: ViewFc = ({ prevData, onPrev }) => {
               key={distro.distro.id}
               distro={distro.distro}
               score={distro.score}
+              maxScore={maxScore}
             />
           ))}
       </CardGrid>
