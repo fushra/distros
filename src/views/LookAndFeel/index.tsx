@@ -6,7 +6,7 @@ import { desktopUser } from '../generalCategory'
 export enum PreferredLookAndFeel {
   Mac = 'Mac like',
   Windows10 = 'Windows like',
-  None = 'User choice',
+  None = 'User choice / Other',
 }
 
 export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
@@ -47,6 +47,19 @@ export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
           onClick={() => setPreferredLookAndFeel(PreferredLookAndFeel.Mac)}
           state={
             preferredLookAndFeel === PreferredLookAndFeel.Mac
+              ? 'focused'
+              : 'none'
+          }
+          interactive
+        />
+        <Card
+          type={'filled'}
+          title="Other / no preference"
+          img="/ux-concept-answer-mac-like.png"
+          imgAlt="Don't weight a distro based on its similarities to MacOS or Windows's ui"
+          onClick={() => setPreferredLookAndFeel(PreferredLookAndFeel.None)}
+          state={
+            preferredLookAndFeel === PreferredLookAndFeel.None
               ? 'focused'
               : 'none'
           }
