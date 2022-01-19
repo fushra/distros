@@ -55,7 +55,6 @@ export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
         <Card
           type={'filled'}
           title="Other / no preference"
-          img="/ux-concept-answer-mac-like.png"
           imgAlt="Don't weight a distro based on its similarities to MacOS or Windows's ui"
           onClick={() => setPreferredLookAndFeel(PreferredLookAndFeel.None)}
           state={
