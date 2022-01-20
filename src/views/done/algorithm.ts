@@ -52,16 +52,6 @@ const customisabilityValue = (customisability: Customisability) => {
 export function generateScore(userInput: GlobalData, distro: Distro): number {
   let score = 0
 
-  // Return a score of zero if the general category is incorrect
-  if (
-    (userInput.generalCategory || GeneralCategoryInfo.Desktop) !==
-    (distro.generalCategory || GeneralCategoryInfo.Desktop)
-  ) {
-    return 0
-  } else {
-    score += 4
-  }
-
   if (userInput.experienceLevel) {
     const userExperience = techExperienceValue(userInput.experienceLevel)
     const distroExperience = techExperienceValue(distro.experienceLevel)
@@ -102,6 +92,11 @@ export type DistroWithScore = {
 
 export function sortDistros(userInput: GlobalData): DistroWithScore[] {
   return distros
+    .filter(
+      (distro) =>
+        (userInput.generalCategory || GeneralCategoryInfo.Desktop) ===
+        (distro.generalCategory || GeneralCategoryInfo.Desktop)
+    )
     .map((distro) => ({
       distro,
       score: generateScore(userInput, distro),
