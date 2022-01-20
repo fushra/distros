@@ -6,7 +6,6 @@ import { join } from 'path'
 
 import { Distro, distros } from '../../data'
 import { Button, Card, CardGrid } from '../../components'
-import { Customisability } from '../../views'
 import Head from 'next/head'
 
 type Props = Distro & {

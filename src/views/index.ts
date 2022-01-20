@@ -1,9 +1,11 @@
 import { FC } from 'react'
-import { GeneralCategoryInfo } from '../data/enum'
-import { Customisability } from './customisability'
-import { PreferredLookAndFeel } from './LookAndFeel'
-import { TechExperienceAmount } from './techExperience'
-import { UsageType } from './usage'
+import {
+  Customisability,
+  GeneralCategoryInfo,
+  PreferredLookAndFeel,
+  TechExperienceAmount,
+  UsageType,
+} from '../data/enum'
 import viewStyle from './views.module.css'
 
 interface PossibleGlobalData {
