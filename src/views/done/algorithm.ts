@@ -12,9 +12,6 @@ const techExperienceValue = (techExperience: TechExperienceAmount) => {
   let val = 0
 
   switch (techExperience) {
-    case TechExperienceAmount.none:
-      val = 0
-      break
     case TechExperienceAmount.basic:
       val = 1
       break

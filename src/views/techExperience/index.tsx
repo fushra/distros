@@ -3,7 +3,6 @@ import { GlobalData, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
 
 export enum TechExperienceAmount {
-  none = 'None',
   basic = 'Basic',
   intermediate = 'Intermediate',
   advanced = 'Advanced',
@@ -12,10 +11,7 @@ export enum TechExperienceAmount {
 // This is an exclusion rule for users that are under the intermediate level of
 // experience. In this case it will return true if they are none or basic
 export function atLeastIntermediate(data: GlobalData) {
-  return (
-    data.experienceLevel === TechExperienceAmount.none ||
-    data.experienceLevel === TechExperienceAmount.basic
-  )
+  return data.experienceLevel === TechExperienceAmount.basic
 }
 
 export function atLeastExpert(data: GlobalData) {
@@ -24,7 +20,7 @@ export function atLeastExpert(data: GlobalData) {
 
 export const TechExperience: ViewFc = ({ prevData, onNext, onPrev }) => {
   const [selected, setSelected] = useState(
-    prevData.experienceLevel || TechExperienceAmount.none
+    prevData.experienceLevel || TechExperienceAmount.basic
   )
 
   return (
@@ -38,13 +34,6 @@ export const TechExperience: ViewFc = ({ prevData, onNext, onPrev }) => {
       </p>
 
       <CardGrid>
-        <Card
-          type={'filled'}
-          title="Little / none"
-          state={selected === TechExperienceAmount.none ? 'focused' : 'none'}
-          onClick={() => setSelected(TechExperienceAmount.none)}
-          interactive
-        />
         <Card
           type={'filled'}
           title="Basic"
@@ -66,7 +55,7 @@ export const TechExperience: ViewFc = ({ prevData, onNext, onPrev }) => {
         <Card
           type={'filled'}
           title="Advanced"
-          text="Makes major changes to windows / macos, e.g. replacing window manager"
+          text="Makes major changes to windows / macos, e.g. replacing window manager or task bar"
           state={
             selected === TechExperienceAmount.advanced ? 'focused' : 'none'
           }
