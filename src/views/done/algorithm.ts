@@ -97,6 +97,13 @@ export function sortDistros(userInput: GlobalData): DistroWithScore[] {
         (userInput.generalCategory || GeneralCategoryInfo.Desktop) ===
         (distro.generalCategory || GeneralCategoryInfo.Desktop)
     )
+    .filter(
+      (distro) =>
+        techExperienceValue(distro.experienceLevel) <=
+        techExperienceValue(
+          userInput.experienceLevel || TechExperienceAmount.basic
+        )
+    )
     .map((distro) => ({
       distro,
       score: generateScore(userInput, distro),
