@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import { UsageType, ViewFc } from '..'
+import { ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid, Center } from '../../components'
 import { Distro } from '../../data'
+import { UsageType } from '../../data/enum'
 import { generateScore, sortDistros } from './algorithm'
 
 const DistroView = ({

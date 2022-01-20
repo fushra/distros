@@ -1,6 +1,10 @@
 import { Distro } from '..'
-import { Customisability, PreferredLookAndFeel, UsageType } from '../../views'
-import { DesktopEnvironment } from '../enum'
+import {
+  Customisability,
+  DesktopEnvironment,
+  PreferredLookAndFeel,
+  UsageType,
+} from '../enum'
 import { Gnome } from '../ui/gnome'
 
 const linuxMint: Distro = {

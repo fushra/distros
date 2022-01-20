@@ -1,6 +1,10 @@
-import { Customisability, GlobalData, TechExperienceAmount } from '..'
+import { GlobalData } from '..'
 import { Distro, distros } from '../../data'
-import { GeneralCategoryInfo } from '../../data/enum'
+import {
+  Customisability,
+  GeneralCategoryInfo,
+  TechExperienceAmount,
+} from '../../data/enum'
 
 function intersection<T>(a: T[], b: T[]): T[] {
   return a

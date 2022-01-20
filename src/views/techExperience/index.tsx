@@ -1,12 +1,7 @@
 import { useState } from 'react'
 import { GlobalData, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
-
-export enum TechExperienceAmount {
-  basic = 'Basic',
-  intermediate = 'Intermediate',
-  advanced = 'Advanced',
-}
+import { TechExperienceAmount } from '../../data/enum'
 
 // This is an exclusion rule for users that are under the intermediate level of
 // experience. In this case it will return true if they are none or basic

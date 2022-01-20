@@ -1,5 +1,5 @@
 import { Distro } from '..'
-import { PreferredLookAndFeel } from '../../views'
+import { PreferredLookAndFeel } from '../enum'
 import { Gnome } from '../ui/gnome'
 
 const zorinCore: Distro = {

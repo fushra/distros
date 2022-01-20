@@ -1,10 +1,11 @@
-import { DesktopEnvironment, GeneralCategoryInfo } from '../enum'
 import {
   Customisability,
+  DesktopEnvironment,
+  GeneralCategoryInfo,
   PreferredLookAndFeel,
   TechExperienceAmount,
   UsageType,
-} from '../../views'
+} from '../enum'
 import { Toolkit } from '../enum'
 
 export const Gnome = {
@@ -12,7 +13,7 @@ export const Gnome = {
   /**
    * Gnome is a really slick user experience
    */
-  experienceLevel: TechExperienceAmount.none,
+  experienceLevel: TechExperienceAmount.basic,
   /**
    *
    */

@@ -1,10 +1,12 @@
 import { Distro } from '..'
 import {
   Customisability,
+  DesktopEnvironment,
+  GeneralCategoryInfo,
   PreferredLookAndFeel,
   TechExperienceAmount,
-} from '../../views'
-import { DesktopEnvironment, GeneralCategoryInfo, Toolkit } from '../enum'
+  Toolkit,
+} from '../enum'
 
 const archLinux: Distro = {
   name: 'Arch Linux',

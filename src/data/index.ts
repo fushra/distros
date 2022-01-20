@@ -2,12 +2,6 @@
 //! applications to be processed into a single json file. Add your distros to the
 //! appropriate arrays in this file
 
-import {
-  Customisability,
-  PreferredLookAndFeel,
-  TechExperienceAmount,
-} from '../views'
-import { UsageType } from '../views/usage'
 import archLinux from './distros/archLinux'
 import kdeNeon from './distros/KDENeon'
 import linuxMint from './distros/linuxMint'
@@ -18,7 +12,15 @@ import popOS from './distros/popOS'
 import ubuntu from './distros/ubuntu'
 import ubuntuServer from './distros/ubuntuServer'
 import zorinCore from './distros/zorinCore'
-import { DesktopEnvironment, GeneralCategoryInfo, Toolkit } from './enum'
+import {
+  Customisability,
+  DesktopEnvironment,
+  GeneralCategoryInfo,
+  PreferredLookAndFeel,
+  TechExperienceAmount,
+  Toolkit,
+  UsageType,
+} from './enum'
 
 export interface Distro {
   name: string

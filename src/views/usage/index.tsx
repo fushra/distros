@@ -1,21 +1,8 @@
 import { useState } from 'react'
 import { requiresSpecific, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
+import { UsageType } from '../../data/enum'
 import { desktopUser } from '../generalCategory'
-
-export enum UsageType {
-  WebBrowsing = 'Web browsing',
-  Email = 'Email',
-  DocumentEditing = 'Document editing',
-
-  PhotoEditing = 'Photo editing',
-  VideoEditing = 'Video editing',
-  AudioEditing = 'Audio editing',
-  Programing = 'Programing',
-
-  SinglePlayerGaming = 'Single player gaming',
-  MultiplayerGaming = 'Multiplayer gaming',
-}
 
 export const Usage: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
   requiresSpecific(prevData, fromPrev, onPrev, onNext, desktopUser)

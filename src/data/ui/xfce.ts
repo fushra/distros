@@ -1,10 +1,12 @@
 import {
+  Toolkit,
+  DesktopEnvironment,
+  GeneralCategoryInfo,
   Customisability,
   PreferredLookAndFeel,
   TechExperienceAmount,
   UsageType,
-} from '../../views'
-import { Toolkit, DesktopEnvironment, GeneralCategoryInfo } from '../enum'
+} from '../enum'
 
 export const XFCE = {
   toolkit: Toolkit.GNOME,

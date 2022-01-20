@@ -1,5 +1,5 @@
 import { Distro } from '..'
-import { TechExperienceAmount } from '../../views'
+import { TechExperienceAmount } from '../enum'
 import { Gnome } from '../ui/gnome'
 
 const manjaroGnome: Distro = {

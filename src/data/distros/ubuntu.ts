@@ -1,5 +1,5 @@
 import { Distro } from '..'
-import { UsageType } from '../../views'
+import { UsageType } from '../enum'
 import { Gnome } from '../ui/gnome'
 
 const ubuntu: Distro = {

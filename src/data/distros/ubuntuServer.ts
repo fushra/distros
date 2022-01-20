@@ -1,10 +1,12 @@
 import { Distro } from '..'
 import {
   Customisability,
+  DesktopEnvironment,
+  GeneralCategoryInfo,
   PreferredLookAndFeel,
   TechExperienceAmount,
-} from '../../views'
-import { DesktopEnvironment, GeneralCategoryInfo, Toolkit } from '../enum'
+  Toolkit,
+} from '../enum'
 
 export const ubuntuServer: Distro = {
   name: 'Ubuntu Server',

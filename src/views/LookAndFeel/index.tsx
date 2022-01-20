@@ -1,13 +1,8 @@
 import { useState } from 'react'
 import { requiresSpecific, ViewFc } from '..'
 import { Button, ButtonGrid, Card, CardGrid } from '../../components'
+import { PreferredLookAndFeel } from '../../data/enum'
 import { desktopUser } from '../generalCategory'
-
-export enum PreferredLookAndFeel {
-  Mac = 'Mac like',
-  Windows10 = 'Windows like',
-  None = 'User choice / Other',
-}
 
 export const LookAndFeel: ViewFc = ({ prevData, onPrev, onNext, fromPrev }) => {
   requiresSpecific(prevData, fromPrev, onPrev, onNext, desktopUser)
